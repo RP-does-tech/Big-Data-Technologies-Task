@@ -1,0 +1,11 @@
+merchant_category,typical_min_value_bnd,typical_max_value_bnd,selection_weight
+Grocery,5,150,18
+Restaurant,5,100,20
+Retail,10,500,16
+Transportation,2,50,12
+Healthcare,10,300,5
+Entertainment,5,200,6
+Utilities,20,500,8
+Education,10,500,5
+Travel,50,1500,3
+Online Shopping,10,400,7

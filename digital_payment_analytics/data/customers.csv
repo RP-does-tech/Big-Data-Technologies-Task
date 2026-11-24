@@ -1,0 +1,301 @@
+customer_id,age,gender,occupation,customer_segment,adoption_level,adoption_tenure_months,monthly_income_bnd,primary_payment_channel,digital_payment_frequency
+C0001,35,Male,Private Sector,Working Adults,Medium,18,1500,Mobile Wallet,Daily
+C0002,36,Male,Private Sector,Working Adults,Medium,2,2000,Mobile Wallet,Weekly
+C0003,52,Male,Self Employed,Working Adults,Medium,27,2500,Mobile Wallet,Weekly
+C0004,45,Male,Private Sector,Working Adults,Medium,18,3000,Mobile Wallet,Daily
+C0005,36,Female,Retired,Young Professionals,High,55,2500,Mobile Wallet,Occasional
+C0006,47,Female,Other,Working Adults,Medium,6,3000,QR Payment,Daily
+C0007,21,Female,Student,Tech Savvy,High,50,2000,Mobile Wallet,Occasional
+C0008,36,Female,Government,Young Professionals,High,11,2000,Debit Card,Daily
+C0009,40,Male,Private Sector,Working Adults,Medium,35,5000,Online Banking,Monthly
+C0010,80,Male,Other,Senior Citizens,Low,36,3000,Mobile Wallet,Weekly
+C0011,55,Female,Student,Traditional Users,Low,26,2000,Debit Card,Weekly
+C0012,47,Male,Government,Working Adults,Medium,30,1500,QR Payment,Monthly
+C0013,48,Female,Private Sector,Working Adults,Medium,26,1500,Online Banking,Daily
+C0014,48,Male,Other,Traditional Users,Low,10,4000,Mobile Wallet,Occasional
+C0015,39,Female,Retired,Young Professionals,High,34,500,Mobile Wallet,Monthly
+C0016,55,Female,Self Employed,Traditional Users,Low,8,1500,Online Banking,Daily
+C0017,68,Male,Retired,Senior Citizens,Low,33,1000,Debit Card,Weekly
+C0018,30,Male,Retired,Tech Savvy,High,11,3000,Online Banking,Daily
+C0019,23,Female,Private Sector,Tech Savvy,High,57,500,QR Payment,Daily
+C0020,25,Male,Retired,Tech Savvy,High,53,1500,QR Payment,Occasional
+C0021,65,Female,Private Sector,Senior Citizens,Low,17,6000,QR Payment,Monthly
+C0022,36,Female,Student,Young Professionals,High,29,2000,QR Payment,Daily
+C0023,32,Male,Student,Young Professionals,High,38,1000,Mobile Wallet,Weekly
+C0024,18,Female,Student,Tech Savvy,High,56,6000,QR Payment,Monthly
+C0025,41,Male,Other,Working Adults,Medium,35,5000,QR Payment,Occasional
+C0026,51,Male,Other,Traditional Users,Low,7,4000,Debit Card,Occasional
+C0027,26,Male,Student,Young Professionals,High,44,4000,Debit Card,Daily
+C0028,21,Female,Private Sector,Tech Savvy,High,35,4000,QR Payment,Monthly
+C0029,27,Male,Student,Young Professionals,High,29,6000,Mobile Wallet,Daily
+C0030,67,Female,Self Employed,Senior Citizens,Low,11,5000,QR Payment,Occasional
+C0031,65,Male,Self Employed,Senior Citizens,Low,25,2500,Online Banking,Monthly
+C0032,40,Male,Government,Young Professionals,High,10,2000,Mobile Wallet,Daily
+C0033,36,Female,Retired,Working Adults,Medium,4,6000,QR Payment,Daily
+C0034,62,Male,Retired,Senior Citizens,Low,12,1000,QR Payment,Occasional
+C0035,27,Male,Retired,Tech Savvy,High,16,1000,Online Banking,Monthly
+C0036,66,Male,Government,Senior Citizens,Low,21,4000,QR Payment,Monthly
+C0037,27,Female,Retired,Young Professionals,High,1,1000,Mobile Wallet,Weekly
+C0038,39,Male,Private Sector,Working Adults,Medium,23,3000,Debit Card,Weekly
+C0039,34,Male,Other,Young Professionals,High,40,6000,Debit Card,Daily
+C0040,64,Male,Student,Senior Citizens,Low,17,6000,QR Payment,Monthly
+C0041,31,Female,Private Sector,Young Professionals,High,46,2500,Online Banking,Monthly
+C0042,61,Female,Government,Senior Citizens,Low,6,500,Mobile Wallet,Monthly
+C0043,65,Male,Other,Traditional Users,Low,17,5000,Online Banking,Daily
+C0044,29,Male,Retired,Tech Savvy,High,58,500,Debit Card,Weekly
+C0045,26,Female,Student,Young Professionals,High,20,3000,QR Payment,Weekly
+C0046,46,Female,Retired,Working Adults,Medium,36,1500,QR Payment,Weekly
+C0047,65,Male,Private Sector,Senior Citizens,Low,27,3000,Online Banking,Weekly
+C0048,28,Male,Self Employed,Young Professionals,High,25,2000,QR Payment,Occasional
+C0049,32,Male,Other,Young Professionals,High,15,2000,Online Banking,Monthly
+C0050,27,Female,Government,Young Professionals,High,50,6000,Online Banking,Monthly
+C0051,63,Male,Retired,Senior Citizens,Low,17,2500,Mobile Wallet,Daily
+C0052,46,Female,Retired,Working Adults,Medium,21,6000,Mobile Wallet,Occasional
+C0053,51,Male,Other,Traditional Users,Low,17,4000,Mobile Wallet,Weekly
+C0054,27,Female,Retired,Young Professionals,High,43,3000,Mobile Wallet,Monthly
+C0055,48,Female,Other,Working Adults,Medium,21,2500,QR Payment,Weekly
+C0056,37,Male,Retired,Young Professionals,High,44,2500,Online Banking,Daily
+C0057,31,Female,Self Employed,Young Professionals,High,28,5000,Online Banking,Weekly
+C0058,40,Female,Retired,Working Adults,Medium,6,3000,Mobile Wallet,Weekly
+C0059,42,Male,Student,Working Adults,Medium,13,500,QR Payment,Occasional
+C0060,37,Female,Other,Working Adults,Medium,30,2000,Online Banking,Occasional
+C0061,29,Male,Student,Young Professionals,High,42,4000,QR Payment,Weekly
+C0062,61,Male,Retired,Traditional Users,Low,30,2000,Mobile Wallet,Occasional
+C0063,25,Female,Self Employed,Tech Savvy,High,43,6000,Online Banking,Occasional
+C0064,60,Female,Private Sector,Traditional Users,Low,29,2500,Online Banking,Weekly
+C0065,27,Female,Private Sector,Young Professionals,High,46,2500,Debit Card,Monthly
+C0066,47,Male,Private Sector,Traditional Users,Low,9,4000,QR Payment,Weekly
+C0067,24,Female,Self Employed,Tech Savvy,High,22,500,QR Payment,Occasional
+C0068,25,Female,Self Employed,Young Professionals,High,55,500,Debit Card,Monthly
+C0069,58,Male,Self Employed,Traditional Users,Low,35,2000,Debit Card,Occasional
+C0070,37,Female,Other,Young Professionals,High,22,1500,Online Banking,Weekly
+C0071,77,Female,Retired,Senior Citizens,Low,2,500,Mobile Wallet,Occasional
+C0072,25,Male,Government,Tech Savvy,High,12,4000,Debit Card,Weekly
+C0073,35,Female,Government,Young Professionals,High,49,4000,Debit Card,Daily
+C0074,26,Male,Other,Young Professionals,High,23,1000,Mobile Wallet,Daily
+C0075,66,Male,Private Sector,Senior Citizens,Low,2,1500,Online Banking,Daily
+C0076,41,Female,Government,Working Adults,Medium,30,1500,Mobile Wallet,Weekly
+C0077,63,Female,Retired,Senior Citizens,Low,2,4000,Online Banking,Weekly
+C0078,29,Male,Student,Tech Savvy,High,54,2500,Mobile Wallet,Daily
+C0079,38,Female,Student,Young Professionals,High,43,6000,Debit Card,Daily
+C0080,60,Female,Government,Traditional Users,Low,7,5000,QR Payment,Occasional
+C0081,26,Female,Retired,Tech Savvy,High,42,6000,Online Banking,Occasional
+C0082,33,Male,Student,Young Professionals,High,21,2500,Online Banking,Weekly
+C0083,63,Female,Student,Traditional Users,Low,25,5000,Debit Card,Weekly
+C0084,36,Female,Government,Young Professionals,High,52,2500,Debit Card,Daily
+C0085,41,Male,Other,Working Adults,Medium,6,4000,Online Banking,Weekly
+C0086,55,Female,Student,Working Adults,Medium,32,1000,Debit Card,Weekly
+C0087,32,Female,Self Employed,Young Professionals,High,20,6000,Debit Card,Occasional
+C0088,77,Female,Other,Senior Citizens,Low,22,5000,Debit Card,Monthly
+C0089,28,Male,Government,Young Professionals,High,47,1000,QR Payment,Weekly
+C0090,25,Female,Student,Tech Savvy,High,18,2000,Debit Card,Weekly
+C0091,34,Male,Government,Young Professionals,High,1,500,Mobile Wallet,Monthly
+C0092,39,Male,Student,Working Adults,Medium,32,2500,Online Banking,Occasional
+C0093,30,Female,Self Employed,Young Professionals,High,4,1000,Mobile Wallet,Occasional
+C0094,26,Male,Retired,Young Professionals,High,10,2500,Mobile Wallet,Weekly
+C0095,30,Male,Retired,Tech Savvy,High,27,4000,Online Banking,Occasional
+C0096,38,Male,Retired,Young Professionals,High,20,1000,QR Payment,Weekly
+C0097,27,Male,Private Sector,Young Professionals,High,11,6000,Mobile Wallet,Weekly
+C0098,25,Female,Government,Tech Savvy,High,45,500,QR Payment,Monthly
+C0099,49,Male,Government,Working Adults,Medium,5,2000,Online Banking,Daily
+C0100,55,Female,Private Sector,Working Adults,Medium,10,1000,Mobile Wallet,Weekly
+C0101,64,Female,Student,Traditional Users,Low,19,5000,Debit Card,Occasional
+C0102,76,Female,Self Employed,Senior Citizens,Low,35,1000,Mobile Wallet,Occasional
+C0103,54,Male,Student,Working Adults,Medium,17,2000,Mobile Wallet,Monthly
+C0104,40,Female,Government,Working Adults,Medium,31,1500,Online Banking,Occasional
+C0105,75,Female,Government,Senior Citizens,Low,23,3000,Mobile Wallet,Weekly
+C0106,40,Female,Retired,Young Professionals,High,19,500,Online Banking,Daily
+C0107,35,Female,Retired,Young Professionals,High,8,500,Online Banking,Occasional
+C0108,26,Female,Other,Tech Savvy,High,24,5000,Mobile Wallet,Weekly
+C0109,29,Female,Self Employed,Young Professionals,High,60,5000,Mobile Wallet,Daily
+C0110,79,Male,Government,Senior Citizens,Low,16,6000,Mobile Wallet,Occasional
+C0111,19,Male,Other,Tech Savvy,High,30,1500,Online Banking,Monthly
+C0112,43,Female,Self Employed,Working Adults,Medium,27,2000,Online Banking,Weekly
+C0113,29,Male,Government,Young Professionals,High,56,4000,Debit Card,Monthly
+C0114,54,Female,Private Sector,Traditional Users,Low,20,5000,Online Banking,Monthly
+C0115,37,Female,Private Sector,Young Professionals,High,30,2000,Online Banking,Weekly
+C0116,58,Female,Other,Traditional Users,Low,3,5000,Online Banking,Occasional
+C0117,80,Female,Student,Senior Citizens,Low,10,1500,Debit Card,Daily
+C0118,59,Female,Student,Traditional Users,Low,7,1500,Online Banking,Weekly
+C0119,30,Female,Retired,Tech Savvy,High,17,4000,Mobile Wallet,Monthly
+C0120,62,Female,Other,Traditional Users,Low,25,5000,Mobile Wallet,Daily
+C0121,28,Female,Private Sector,Tech Savvy,High,59,1000,Online Banking,Daily
+C0122,48,Male,Other,Traditional Users,Low,29,2500,Mobile Wallet,Daily
+C0123,26,Female,Government,Young Professionals,High,19,4000,QR Payment,Weekly
+C0124,53,Male,Private Sector,Working Adults,Medium,12,1000,Online Banking,Weekly
+C0125,29,Female,Other,Young Professionals,High,15,2500,Online Banking,Monthly
+C0126,49,Male,Student,Working Adults,Medium,19,5000,Debit Card,Monthly
+C0127,48,Female,Government,Working Adults,Medium,17,2000,Online Banking,Occasional
+C0128,24,Female,Retired,Tech Savvy,High,37,2500,Debit Card,Daily
+C0129,72,Male,Retired,Senior Citizens,Low,18,500,Online Banking,Monthly
+C0130,52,Male,Other,Traditional Users,Low,23,2000,Debit Card,Weekly
+C0131,55,Female,Self Employed,Working Adults,Medium,3,500,Debit Card,Weekly
+C0132,22,Female,Private Sector,Tech Savvy,High,21,2000,QR Payment,Monthly
+C0133,43,Female,Self Employed,Working Adults,Medium,11,2500,Debit Card,Daily
+C0134,27,Male,Other,Young Professionals,High,10,4000,Debit Card,Daily
+C0135,45,Male,Self Employed,Traditional Users,Low,17,3000,Debit Card,Occasional
+C0136,56,Male,Self Employed,Traditional Users,Low,7,500,Debit Card,Weekly
+C0137,55,Female,Other,Working Adults,Medium,30,4000,Mobile Wallet,Weekly
+C0138,18,Female,Student,Tech Savvy,High,20,1000,QR Payment,Weekly
+C0139,36,Female,Retired,Young Professionals,High,43,1500,Online Banking,Daily
+C0140,64,Female,Student,Traditional Users,Low,27,3000,QR Payment,Occasional
+C0141,32,Female,Student,Young Professionals,High,55,3000,Debit Card,Daily
+C0142,31,Female,Student,Young Professionals,High,8,2000,Mobile Wallet,Daily
+C0143,52,Male,Student,Traditional Users,Low,9,6000,QR Payment,Weekly
+C0144,52,Male,Retired,Traditional Users,Low,22,500,Debit Card,Weekly
+C0145,77,Male,Student,Senior Citizens,Low,17,500,QR Payment,Daily
+C0146,32,Female,Student,Young Professionals,High,38,1500,Debit Card,Daily
+C0147,24,Male,Other,Tech Savvy,High,34,1000,Online Banking,Occasional
+C0148,61,Female,Retired,Traditional Users,Low,7,2000,Mobile Wallet,Monthly
+C0149,25,Female,Self Employed,Young Professionals,High,4,4000,Mobile Wallet,Occasional
+C0150,49,Male,Government,Working Adults,Medium,5,1500,Mobile Wallet,Weekly
+C0151,35,Female,Self Employed,Young Professionals,High,25,6000,Online Banking,Daily
+C0152,48,Male,Self Employed,Traditional Users,Low,36,5000,QR Payment,Occasional
+C0153,39,Female,Other,Young Professionals,High,26,1000,Debit Card,Occasional
+C0154,33,Male,Other,Young Professionals,High,24,5000,Mobile Wallet,Daily
+C0155,47,Male,Other,Traditional Users,Low,28,3000,QR Payment,Daily
+C0156,52,Female,Other,Working Adults,Medium,36,1000,Online Banking,Monthly
+C0157,58,Female,Retired,Traditional Users,Low,4,2500,Debit Card,Daily
+C0158,41,Female,Private Sector,Working Adults,Medium,10,1000,Debit Card,Monthly
+C0159,22,Male,Self Employed,Tech Savvy,High,37,6000,Mobile Wallet,Monthly
+C0160,22,Female,Government,Tech Savvy,High,45,3000,Mobile Wallet,Weekly
+C0161,63,Male,Private Sector,Traditional Users,Low,26,500,Mobile Wallet,Weekly
+C0162,39,Male,Government,Young Professionals,High,22,2500,Debit Card,Daily
+C0163,49,Male,Other,Traditional Users,Low,11,1000,Debit Card,Occasional
+C0164,50,Female,Government,Working Adults,Medium,29,2000,Mobile Wallet,Monthly
+C0165,34,Female,Retired,Young Professionals,High,44,2500,Mobile Wallet,Weekly
+C0166,26,Male,Government,Young Professionals,High,1,2000,QR Payment,Monthly
+C0167,28,Female,Other,Young Professionals,High,1,4000,QR Payment,Weekly
+C0168,32,Female,Student,Young Professionals,High,33,4000,Mobile Wallet,Occasional
+C0169,19,Female,Retired,Tech Savvy,High,56,4000,Online Banking,Occasional
+C0170,37,Female,Private Sector,Young Professionals,High,2,5000,Debit Card,Daily
+C0171,28,Female,Retired,Young Professionals,High,16,4000,Mobile Wallet,Occasional
+C0172,55,Female,Private Sector,Traditional Users,Low,15,1000,Mobile Wallet,Weekly
+C0173,71,Male,Private Sector,Senior Citizens,Low,23,1000,QR Payment,Monthly
+C0174,27,Male,Private Sector,Tech Savvy,High,10,5000,Online Banking,Occasional
+C0175,53,Female,Private Sector,Working Adults,Medium,21,5000,Mobile Wallet,Occasional
+C0176,34,Female,Retired,Young Professionals,High,51,500,Debit Card,Daily
+C0177,39,Male,Government,Young Professionals,High,3,2500,Mobile Wallet,Daily
+C0178,51,Female,Retired,Working Adults,Medium,25,6000,Mobile Wallet,Occasional
+C0179,78,Female,Retired,Senior Citizens,Low,13,5000,QR Payment,Daily
+C0180,35,Male,Retired,Young Professionals,High,46,1500,Mobile Wallet,Weekly
+C0181,49,Male,Government,Working Adults,Medium,34,3000,Debit Card,Occasional
+C0182,35,Male,Other,Young Professionals,High,44,3000,Mobile Wallet,Monthly
+C0183,28,Female,Government,Tech Savvy,High,25,1500,Debit Card,Daily
+C0184,39,Female,Other,Working Adults,Medium,23,4000,QR Payment,Daily
+C0185,37,Female,Private Sector,Young Professionals,High,42,6000,Mobile Wallet,Occasional
+C0186,35,Female,Private Sector,Working Adults,Medium,24,2000,Debit Card,Occasional
+C0187,20,Male,Government,Tech Savvy,High,10,1000,Mobile Wallet,Monthly
+C0188,64,Female,Private Sector,Traditional Users,Low,9,1500,QR Payment,Weekly
+C0189,36,Female,Other,Working Adults,Medium,27,2000,Online Banking,Monthly
+C0190,59,Male,Government,Traditional Users,Low,15,5000,QR Payment,Monthly
+C0191,53,Female,Government,Working Adults,Medium,29,4000,Online Banking,Weekly
+C0192,64,Female,Student,Traditional Users,Low,9,5000,Debit Card,Daily
+C0193,51,Female,Student,Working Adults,Medium,8,1500,Debit Card,Occasional
+C0194,64,Male,Private Sector,Senior Citizens,Low,28,5000,Debit Card,Daily
+C0195,37,Female,Private Sector,Young Professionals,High,33,4000,Mobile Wallet,Monthly
+C0196,23,Male,Other,Tech Savvy,High,60,3000,QR Payment,Weekly
+C0197,25,Male,Other,Tech Savvy,High,45,5000,Online Banking,Daily
+C0198,60,Male,Private Sector,Senior Citizens,Low,17,6000,Online Banking,Daily
+C0199,52,Male,Student,Traditional Users,Low,20,2000,Online Banking,Occasional
+C0200,25,Male,Other,Tech Savvy,High,39,6000,QR Payment,Weekly
+C0201,25,Female,Private Sector,Young Professionals,High,40,4000,QR Payment,Daily
+C0202,46,Male,Self Employed,Working Adults,Medium,5,5000,Mobile Wallet,Occasional
+C0203,68,Female,Student,Senior Citizens,Low,2,3000,QR Payment,Daily
+C0204,55,Male,Government,Traditional Users,Low,9,6000,Debit Card,Weekly
+C0205,59,Male,Private Sector,Traditional Users,Low,31,1000,Online Banking,Daily
+C0206,26,Male,Student,Young Professionals,High,51,3000,Debit Card,Occasional
+C0207,77,Female,Student,Senior Citizens,Low,31,2000,Debit Card,Monthly
+C0208,46,Female,Student,Traditional Users,Low,22,3000,Online Banking,Occasional
+C0209,47,Male,Self Employed,Working Adults,Medium,22,5000,Debit Card,Monthly
+C0210,58,Female,Retired,Traditional Users,Low,6,1500,Debit Card,Monthly
+C0211,23,Female,Government,Tech Savvy,High,43,5000,Online Banking,Weekly
+C0212,46,Male,Other,Working Adults,Medium,29,3000,Online Banking,Monthly
+C0213,36,Female,Government,Working Adults,Medium,5,6000,QR Payment,Daily
+C0214,27,Female,Student,Tech Savvy,High,44,1500,Mobile Wallet,Weekly
+C0215,56,Female,Retired,Traditional Users,Low,24,500,QR Payment,Occasional
+C0216,71,Male,Retired,Senior Citizens,Low,29,1500,Debit Card,Occasional
+C0217,33,Male,Student,Young Professionals,High,16,1500,Online Banking,Occasional
+C0218,63,Female,Other,Senior Citizens,Low,17,5000,QR Payment,Monthly
+C0219,50,Male,Private Sector,Working Adults,Medium,13,1000,Online Banking,Weekly
+C0220,59,Female,Other,Traditional Users,Low,6,3000,Mobile Wallet,Monthly
+C0221,50,Female,Retired,Traditional Users,Low,12,2000,Mobile Wallet,Weekly
+C0222,52,Male,Government,Traditional Users,Low,32,6000,Debit Card,Occasional
+C0223,62,Male,Student,Traditional Users,Low,9,2500,Online Banking,Occasional
+C0224,48,Male,Government,Working Adults,Medium,5,1000,Online Banking,Occasional
+C0225,46,Male,Private Sector,Working Adults,Medium,9,4000,Mobile Wallet,Daily
+C0226,44,Male,Government,Working Adults,Medium,11,2000,Debit Card,Monthly
+C0227,53,Female,Private Sector,Traditional Users,Low,13,2500,Mobile Wallet,Weekly
+C0228,53,Male,Other,Working Adults,Medium,10,3000,Mobile Wallet,Daily
+C0229,28,Female,Other,Tech Savvy,High,50,2000,Online Banking,Daily
+C0230,34,Female,Self Employed,Young Professionals,High,42,2000,Online Banking,Monthly
+C0231,26,Female,Self Employed,Young Professionals,High,11,5000,Online Banking,Weekly
+C0232,29,Female,Other,Young Professionals,High,21,3000,Online Banking,Weekly
+C0233,61,Male,Government,Traditional Users,Low,36,2000,Online Banking,Daily
+C0234,32,Male,Student,Young Professionals,High,10,2500,Online Banking,Occasional
+C0235,20,Female,Retired,Tech Savvy,High,53,3000,QR Payment,Weekly
+C0236,39,Female,Self Employed,Young Professionals,High,32,500,Mobile Wallet,Occasional
+C0237,42,Female,Student,Working Adults,Medium,14,500,Debit Card,Occasional
+C0238,55,Female,Retired,Working Adults,Medium,31,500,Mobile Wallet,Occasional
+C0239,22,Female,Self Employed,Tech Savvy,High,47,3000,Mobile Wallet,Occasional
+C0240,26,Female,Retired,Tech Savvy,High,13,2500,Mobile Wallet,Occasional
+C0241,52,Male,Private Sector,Working Adults,Medium,18,1000,Online Banking,Monthly
+C0242,55,Female,Private Sector,Traditional Users,Low,36,2000,Online Banking,Daily
+C0243,20,Female,Self Employed,Tech Savvy,High,46,6000,Online Banking,Weekly
+C0244,51,Female,Retired,Working Adults,Medium,9,3000,QR Payment,Occasional
+C0245,69,Female,Other,Senior Citizens,Low,22,2500,Online Banking,Daily
+C0246,28,Female,Other,Young Professionals,High,27,500,Online Banking,Monthly
+C0247,78,Male,Retired,Senior Citizens,Low,15,5000,QR Payment,Occasional
+C0248,28,Male,Retired,Tech Savvy,High,16,1000,QR Payment,Daily
+C0249,38,Female,Other,Young Professionals,High,10,2000,Online Banking,Occasional
+C0250,46,Male,Retired,Traditional Users,Low,9,3000,Online Banking,Occasional
+C0251,30,Female,Retired,Young Professionals,High,30,3000,Debit Card,Occasional
+C0252,21,Female,Private Sector,Tech Savvy,High,18,2500,Debit Card,Weekly
+C0253,50,Female,Government,Working Adults,Medium,21,6000,Debit Card,Monthly
+C0254,28,Female,Self Employed,Tech Savvy,High,35,3000,QR Payment,Monthly
+C0255,29,Female,Self Employed,Tech Savvy,High,6,2500,Online Banking,Weekly
+C0256,26,Female,Private Sector,Tech Savvy,High,18,1000,QR Payment,Weekly
+C0257,26,Male,Student,Tech Savvy,High,15,1000,Online Banking,Monthly
+C0258,38,Male,Retired,Working Adults,Medium,9,1500,Online Banking,Occasional
+C0259,31,Female,Government,Young Professionals,High,49,2500,Mobile Wallet,Daily
+C0260,42,Male,Private Sector,Working Adults,Medium,35,4000,QR Payment,Daily
+C0261,72,Male,Other,Senior Citizens,Low,32,2500,Mobile Wallet,Daily
+C0262,28,Female,Government,Young Professionals,High,60,5000,Online Banking,Weekly
+C0263,59,Male,Student,Traditional Users,Low,18,3000,QR Payment,Occasional
+C0264,40,Female,Government,Working Adults,Medium,1,2000,QR Payment,Occasional
+C0265,61,Male,Self Employed,Traditional Users,Low,21,1000,QR Payment,Weekly
+C0266,32,Female,Self Employed,Young Professionals,High,1,2000,Online Banking,Monthly
+C0267,69,Female,Other,Senior Citizens,Low,1,3000,QR Payment,Daily
+C0268,49,Male,Self Employed,Working Adults,Medium,20,6000,Debit Card,Daily
+C0269,44,Male,Private Sector,Working Adults,Medium,24,1500,Online Banking,Weekly
+C0270,36,Female,Retired,Young Professionals,High,27,2000,QR Payment,Daily
+C0271,51,Male,Retired,Working Adults,Medium,24,1000,Mobile Wallet,Weekly
+C0272,39,Female,Retired,Working Adults,Medium,11,5000,Mobile Wallet,Weekly
+C0273,50,Female,Student,Working Adults,Medium,6,5000,QR Payment,Occasional
+C0274,26,Female,Other,Young Professionals,High,36,2500,Mobile Wallet,Occasional
+C0275,25,Male,Retired,Young Professionals,High,48,1000,Mobile Wallet,Occasional
+C0276,27,Male,Student,Young Professionals,High,35,5000,Mobile Wallet,Monthly
+C0277,29,Female,Government,Young Professionals,High,50,4000,Online Banking,Occasional
+C0278,29,Female,Student,Young Professionals,High,42,1500,Online Banking,Weekly
+C0279,42,Male,Government,Working Adults,Medium,1,5000,Online Banking,Occasional
+C0280,52,Female,Private Sector,Traditional Users,Low,30,2500,QR Payment,Daily
+C0281,28,Male,Private Sector,Tech Savvy,High,27,2000,Mobile Wallet,Daily
+C0282,49,Male,Other,Working Adults,Medium,4,500,Online Banking,Occasional
+C0283,21,Male,Private Sector,Tech Savvy,High,49,6000,Debit Card,Weekly
+C0284,63,Female,Private Sector,Traditional Users,Low,21,2500,QR Payment,Weekly
+C0285,33,Male,Other,Young Professionals,High,4,4000,Online Banking,Daily
+C0286,80,Female,Other,Senior Citizens,Low,25,4000,Online Banking,Weekly
+C0287,30,Female,Private Sector,Young Professionals,High,49,2000,Debit Card,Weekly
+C0288,46,Female,Self Employed,Traditional Users,Low,36,6000,QR Payment,Occasional
+C0289,21,Male,Self Employed,Tech Savvy,High,22,3000,Mobile Wallet,Weekly
+C0290,24,Male,Student,Tech Savvy,High,44,2000,QR Payment,Occasional
+C0291,23,Male,Private Sector,Tech Savvy,High,20,2000,Mobile Wallet,Occasional
+C0292,79,Female,Private Sector,Senior Citizens,Low,14,6000,Debit Card,Monthly
+C0293,36,Female,Government,Young Professionals,High,20,6000,Online Banking,Occasional
+C0294,29,Female,Private Sector,Tech Savvy,High,31,3000,Debit Card,Occasional
+C0295,21,Male,Student,Tech Savvy,High,48,2500,Online Banking,Monthly
+C0296,23,Female,Retired,Tech Savvy,High,15,2000,Online Banking,Monthly
+C0297,40,Female,Self Employed,Young Professionals,High,47,1500,Debit Card,Weekly
+C0298,26,Male,Retired,Tech Savvy,High,32,500,Mobile Wallet,Daily
+C0299,61,Female,Private Sector,Senior Citizens,Low,1,2000,Mobile Wallet,Weekly
+C0300,26,Female,Student,Tech Savvy,High,30,5000,Online Banking,Daily

@@ -1,0 +1,308 @@
+==============================================================================
+Q1 | Find one customer by _id (embedded structure)
+==============================================================================
+PURPOSE: Verify how demographic, adoption and preference fields are embedded.
+
+[
+  {
+    "_id": "C0001",
+    "customer_id": "C0001",
+    "demographic": {
+      "age": 35,
+      "gender": "Male",
+      "occupation": "Private Sector"
+    },
+    "segment": "Working Adults",
+    "adoption": {
+      "level": "Medium",
+      "tenure_months": 18
+    },
+    "monthly_income_bnd": 1500,
+    "preferences": {
+      "primary_payment_channel": "Mobile Wallet",
+      "digital_payment_frequency": "Daily"
+    }
+  }
+]
+
+==============================================================================
+Q2 | High-adoption customers with income >= 5000 BND
+==============================================================================
+PURPOSE: Find affluent, digitally adopted customers; sort by embedded age desc.
+
+[
+  {
+    "_id": "C0079",
+    "demographic": {
+      "age": 38
+    },
+    "segment": "Young Professionals",
+    "adoption": {
+      "level": "High"
+    },
+    "monthly_income_bnd": 6000
+  },
+  {
+    "_id": "C0185",
+    "demographic": {
+      "age": 37
+    },
+    "segment": "Young Professionals",
+    "adoption": {
+      "level": "High"
+    },
+    "monthly_income_bnd": 6000
+  },
+  {
+    "_id": "C0170",
+    "demographic": {
+      "age": 37
+    },
+    "segment": "Young Professionals",
+    "adoption": {
+      "level": "High"
+    },
+    "monthly_income_bnd": 5000
+  },
+  {
+    "_id": "C0293",
+    "demographic": {
+      "age": 36
+    },
+    "segment": "Young Professionals",
+    "adoption": {
+      "level": "High"
+    },
+    "monthly_income_bnd": 6000
+  },
+  {
+    "_id": "C0151",
+    "demographic": {
+      "age": 35
+    },
+    "segment": "Young Professionals",
+    "adoption": {
+      "level": "High"
+    },
+    "monthly_income_bnd": 6000
+  }
+]
+
+==============================================================================
+Q3 | Locations within 50 km of central Bandar Seri Begawan
+==============================================================================
+PURPOSE: Demonstrate the GeoJSON Point + 2dsphere index for proximity lookup.
+
+[
+  {
+    "_id": "L072",
+    "district": "Temburong",
+    "area_name": "Labu",
+    "urbanity": "Suburban"
+  },
+  {
+    "_id": "L068",
+    "district": "Brunei-Muara",
+    "area_name": "Kiulap",
+    "urbanity": "Urban"
+  },
+  {
+    "_id": "L096",
+    "district": "Brunei-Muara",
+    "area_name": "Kiulap",
+    "urbanity": "Urban"
+  }
+]
+
+==============================================================================
+Q4 | Resolve a transaction's customer reference with $lookup
+==============================================================================
+PURPOSE: Join transactions to the customers collection instead of duplicating all customer fields in every transaction.
+
+[
+  {
+    "transaction_id": "T000002",
+    "value": {
+      "amount": 12.83,
+      "currency": "BND"
+    },
+    "merchant_category": "Retail",
+    "customer_segment": "Working Adults",
+    "customer_occupation": "Private Sector"
+  },
+  {
+    "transaction_id": "T000189",
+    "value": {
+      "amount": 58.37,
+      "currency": "BND"
+    },
+    "merchant_category": "Restaurant",
+    "customer_segment": "Working Adults",
+    "customer_occupation": "Private Sector"
+  },
+  {
+    "transaction_id": "T000627",
+    "value": {
+      "amount": 145.59,
+      "currency": "BND"
+    },
+    "merchant_category": "Retail",
+    "customer_segment": "Working Adults",
+    "customer_occupation": "Private Sector"
+  }
+]
+
+==============================================================================
+A1 | Successful high-adoption spend by merchant category (top 5)
+==============================================================================
+PURPOSE: Aggregate successful payments made by High-adoption customers, rank categories by total BND value, and present rounded summary fields.
+
+[
+  {
+    "transactions": 360,
+    "merchant_category": "Retail",
+    "total_value": 93626.23,
+    "avg_value": 260.07,
+    "max_value": 610.27
+  },
+  {
+    "transactions": 87,
+    "merchant_category": "Travel",
+    "total_value": 67878.65,
+    "avg_value": 780.21,
+    "max_value": 1650.73
+  },
+  {
+    "transactions": 179,
+    "merchant_category": "Utilities",
+    "total_value": 48768.1,
+    "avg_value": 272.45,
+    "max_value": 615.58
+  },
+  {
+    "transactions": 404,
+    "merchant_category": "Grocery",
+    "total_value": 32852.27,
+    "avg_value": 81.32,
+    "max_value": 187.02
+  },
+  {
+    "transactions": 153,
+    "merchant_category": "Online Shopping",
+    "total_value": 32847.18,
+    "avg_value": 214.69,
+    "max_value": 508.88
+  }
+]
+
+==============================================================================
+A2 | Payment-channel usage with lookup to the channel lookup collection
+==============================================================================
+PURPOSE: Count and average value per channel, then enrich with the human-readable channel_id stored in the payment_channels collection.
+
+[
+  {
+    "transactions": 1005,
+    "payment_channel": "Debit Card",
+    "channel_id": "PC03",
+    "avg_value": 164.58
+  },
+  {
+    "transactions": 963,
+    "payment_channel": "Mobile Wallet",
+    "channel_id": "PC01",
+    "avg_value": 168.09
+  },
+  {
+    "transactions": 939,
+    "payment_channel": "QR Payment",
+    "channel_id": "PC02",
+    "avg_value": 163.35
+  },
+  {
+    "transactions": 762,
+    "payment_channel": "Credit Card",
+    "channel_id": "PC04",
+    "avg_value": 154.97
+  },
+  {
+    "transactions": 723,
+    "payment_channel": "Bank Transfer",
+    "channel_id": "PC06",
+    "avg_value": 150.07
+  },
+  {
+    "transactions": 608,
+    "payment_channel": "Online Banking",
+    "channel_id": "PC05",
+    "avg_value": 172.28
+  }
+]
+
+==============================================================================
+A3 | Monthly transaction volume and value
+==============================================================================
+PURPOSE: Derive the calendar month directly from the BSON date in the pipeline and produce a 12-row trend for 2025.
+
+[
+  {
+    "transactions": 440,
+    "month": 1,
+    "total_value": 75779.72
+  },
+  {
+    "transactions": 398,
+    "month": 2,
+    "total_value": 63737.85
+  },
+  {
+    "transactions": 417,
+    "month": 3,
+    "total_value": 70347.71
+  },
+  {
+    "transactions": 408,
+    "month": 4,
+    "total_value": 62938.08
+  },
+  {
+    "transactions": 420,
+    "month": 5,
+    "total_value": 67710.08
+  },
+  {
+    "transactions": 379,
+    "month": 6,
+    "total_value": 63468.38
+  },
+  {
+    "transactions": 427,
+    "month": 7,
+    "total_value": 66266.28
+  },
+  {
+    "transactions": 426,
+    "month": 8,
+    "total_value": 64914.03
+  },
+  {
+    "transactions": 398,
+    "month": 9,
+    "total_value": 65416.97
+  },
+  {
+    "transactions": 438,
+    "month": 10,
+    "total_value": 73885.87
+  },
+  {
+    "transactions": 407,
+    "month": 11,
+    "total_value": 64532.19
+  },
+  {
+    "transactions": 442,
+    "month": 12,
+    "total_value": 72999.28
+  }
+]

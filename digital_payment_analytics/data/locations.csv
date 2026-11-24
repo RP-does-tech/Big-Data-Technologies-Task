@@ -1,0 +1,101 @@
+location_id,district,area_name,urbanity,country,latitude,longitude
+L001,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.50711,115.02942
+L002,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.51029,115.31316
+L003,Belait,Seria,Urban,Brunei Darussalam,5.05083,115.02439
+L004,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.98913,114.76732
+L005,Brunei-Muara,Rimba,Urban,Brunei Darussalam,5.07558,114.959
+L006,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.67998,115.32806
+L007,Brunei-Muara,Bandar Seri Begawan,Urban,Brunei Darussalam,4.5561,114.87926
+L008,Brunei-Muara,Bandar Seri Begawan,Urban,Brunei Darussalam,4.88205,115.20285
+L009,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.88694,114.83127
+L010,Temburong,Bangar,Rural,Brunei Darussalam,5.05149,114.72977
+L011,Tutong,Lamunin,Suburban,Brunei Darussalam,4.52794,114.57435
+L012,Temburong,Bangar,Urban,Brunei Darussalam,5.05726,114.81448
+L013,Temburong,Batang Duri,Rural,Brunei Darussalam,4.99254,115.42887
+L014,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.84002,115.34944
+L015,Belait,Lumut,Suburban,Brunei Darussalam,4.95337,114.63995
+L016,Temburong,Bangar,Rural,Brunei Darussalam,4.94727,114.84586
+L017,Brunei-Muara,Berakas,Urban,Brunei Darussalam,5.0032,114.84059
+L018,Belait,Sungai Liang,Suburban,Brunei Darussalam,4.51778,114.77333
+L019,Temburong,Labu,Urban,Brunei Darussalam,4.71349,115.44114
+L020,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.55142,115.11862
+L021,Belait,Kuala Belait,Urban,Brunei Darussalam,4.66078,114.88
+L022,Belait,Seria,Rural,Brunei Darussalam,4.73377,114.8607
+L023,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.76684,115.26135
+L024,Brunei-Muara,Gadong,Urban,Brunei Darussalam,4.61244,114.94884
+L025,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.56198,114.58962
+L026,Brunei-Muara,Rimba,Urban,Brunei Darussalam,5.01823,114.51234
+L027,Brunei-Muara,Gadong,Urban,Brunei Darussalam,4.93491,115.05954
+L028,Temburong,Batang Duri,Rural,Brunei Darussalam,4.81266,115.18532
+L029,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.68068,114.99312
+L030,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.66558,114.79975
+L031,Belait,Lumut,Suburban,Brunei Darussalam,5.06653,115.2209
+L032,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.77472,114.63549
+L033,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.69933,115.12019
+L034,Tutong,Telisai,Suburban,Brunei Darussalam,4.70084,115.31548
+L035,Tutong,Pekan Tutong,Suburban,Brunei Darussalam,4.6924,115.44728
+L036,Brunei-Muara,Rimba,Urban,Brunei Darussalam,4.60658,114.89824
+L037,Brunei-Muara,Mentiri,Urban,Brunei Darussalam,5.08066,115.28197
+L038,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.9899,114.89294
+L039,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.85534,115.04563
+L040,Belait,Kuala Belait,Rural,Brunei Darussalam,4.77697,115.20837
+L041,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.99877,114.56916
+L042,Tutong,Lamunin,Rural,Brunei Darussalam,4.79958,115.13334
+L043,Brunei-Muara,Kiulap,Urban,Brunei Darussalam,4.92914,115.28908
+L044,Brunei-Muara,Mentiri,Urban,Brunei Darussalam,4.84935,115.03437
+L045,Temburong,Labu,Rural,Brunei Darussalam,4.52206,115.46843
+L046,Belait,Kuala Belait,Urban,Brunei Darussalam,4.96137,115.1576
+L047,Brunei-Muara,Bandar Seri Begawan,Urban,Brunei Darussalam,4.83793,115.14503
+L048,Belait,Lumut,Suburban,Brunei Darussalam,4.56357,114.59861
+L049,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.76747,114.89113
+L050,Belait,Seria,Suburban,Brunei Darussalam,5.09862,114.98277
+L051,Brunei-Muara,Gadong,Urban,Brunei Darussalam,4.56964,115.44068
+L052,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.70584,115.28427
+L053,Brunei-Muara,Rimba,Urban,Brunei Darussalam,4.7857,114.93817
+L054,Belait,Lumut,Urban,Brunei Darussalam,4.68016,115.31019
+L055,Brunei-Muara,Rimba,Urban,Brunei Darussalam,4.88878,115.17714
+L056,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.8096,115.05191
+L057,Brunei-Muara,Muara,Urban,Brunei Darussalam,5.07508,114.73186
+L058,Brunei-Muara,Kiulap,Urban,Brunei Darussalam,4.61183,115.15731
+L059,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.76975,114.92955
+L060,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.62347,115.25233
+L061,Tutong,Tutong Town,Rural,Brunei Darussalam,4.56105,115.37198
+L062,Brunei-Muara,Rimba,Urban,Brunei Darussalam,4.61824,114.61395
+L063,Belait,Sungai Liang,Rural,Brunei Darussalam,5.07955,114.8134
+L064,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.8522,114.84792
+L065,Tutong,Pekan Tutong,Rural,Brunei Darussalam,4.92359,114.79744
+L066,Belait,Kuala Belait,Rural,Brunei Darussalam,4.58037,114.61786
+L067,Brunei-Muara,Kiulap,Urban,Brunei Darussalam,4.72398,114.64136
+L068,Brunei-Muara,Kiulap,Urban,Brunei Darussalam,4.84488,114.92304
+L069,Brunei-Muara,Kiulap,Urban,Brunei Darussalam,4.83295,114.98964
+L070,Brunei-Muara,Rimba,Urban,Brunei Darussalam,5.00519,115.11941
+L071,Tutong,Tutong Town,Suburban,Brunei Darussalam,4.58192,115.31522
+L072,Temburong,Labu,Suburban,Brunei Darussalam,4.91082,114.91563
+L073,Tutong,Lamunin,Urban,Brunei Darussalam,4.5496,114.53086
+L074,Belait,Lumut,Urban,Brunei Darussalam,4.66491,115.03761
+L075,Brunei-Muara,Mentiri,Urban,Brunei Darussalam,4.83939,115.27255
+L076,Brunei-Muara,Gadong,Urban,Brunei Darussalam,4.84363,114.76789
+L077,Brunei-Muara,Rimba,Urban,Brunei Darussalam,4.82523,115.25679
+L078,Belait,Sungai Liang,Rural,Brunei Darussalam,4.63113,114.92515
+L079,Belait,Seria,Suburban,Brunei Darussalam,5.02489,114.53223
+L080,Brunei-Muara,Gadong,Urban,Brunei Darussalam,4.76344,115.49396
+L081,Belait,Seria,Urban,Brunei Darussalam,4.98642,115.08792
+L082,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.59959,114.63923
+L083,Brunei-Muara,Berakas,Urban,Brunei Darussalam,4.98326,115.07007
+L084,Brunei-Muara,Kiulap,Urban,Brunei Darussalam,4.69419,115.20405
+L085,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,5.07144,115.01441
+L086,Tutong,Tutong Town,Urban,Brunei Darussalam,5.07766,115.28569
+L087,Tutong,Telisai,Rural,Brunei Darussalam,4.57613,115.36608
+L088,Brunei-Muara,Rimba,Urban,Brunei Darussalam,4.99709,115.26147
+L089,Belait,Sungai Liang,Urban,Brunei Darussalam,4.84646,114.76872
+L090,Brunei-Muara,Mentiri,Urban,Brunei Darussalam,4.54531,115.2946
+L091,Belait,Sungai Liang,Rural,Brunei Darussalam,4.94988,115.1947
+L092,Tutong,Lamunin,Suburban,Brunei Darussalam,4.69637,114.50247
+L093,Belait,Kuala Belait,Rural,Brunei Darussalam,5.08329,115.13484
+L094,Belait,Kuala Belait,Rural,Brunei Darussalam,4.73863,115.46813
+L095,Tutong,Lamunin,Suburban,Brunei Darussalam,4.69372,114.78359
+L096,Brunei-Muara,Kiulap,Urban,Brunei Darussalam,4.83969,114.98534
+L097,Brunei-Muara,Bandar Seri Begawan,Urban,Brunei Darussalam,4.52757,115.12618
+L098,Tutong,Tutong Town,Urban,Brunei Darussalam,5.05766,114.65798
+L099,Brunei-Muara,Muara,Urban,Brunei Darussalam,4.62139,115.18859
+L100,Brunei-Muara,Jerudong,Urban,Brunei Darussalam,4.59539,115.43273

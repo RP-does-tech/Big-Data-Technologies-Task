@@ -1,0 +1,12 @@
+01_value_distribution.png
+02_categorical_counts.png
+03_temporal_patterns.png
+04_customer_profile.png
+05_value_by_category.png
+06_segment_channel_heatmap.png
+07_adoption_tenure_value.png
+08_status_by_channel.png
+09_income_vs_value.png
+10_geography.png
+11_correlation_heatmap.png
+12_multivariate_and_outliers.png

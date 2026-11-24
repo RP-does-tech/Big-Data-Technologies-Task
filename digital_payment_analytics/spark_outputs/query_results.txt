@@ -1,0 +1,218 @@
+==================================================================================
+ANSWER 1 | Digital-first channel usage by customer segment
+==================================================================================
+QUESTION: Which segments rely most on digital-first rails (wallet/QR), and how does that compare with their average income and average payment value?
+
+CODE:
+digital = ["Mobile Wallet", "QR Payment"]
+answer_1 = (
+    transactions.filter(F.col("transaction_status") == "Successful")
+    .join(customers.select("customer_id", "monthly_income_bnd"), "customer_id")
+    .withColumn("is_digital_first",
+                F.col("payment_channel").isin(digital).cast("int"))
+    .groupBy("customer_segment")
+    .agg(F.count("*").alias("transactions"),
+         F.round(F.avg("is_digital_first") * 100, 1).alias("digital_first_pct"),
+         F.round(F.avg("transaction_value_bnd"), 2).alias("avg_value_bnd"),
+         F.round(F.avg("monthly_income_bnd"), 0).alias("avg_income_bnd"))
+    .orderBy(F.desc("digital_first_pct"))
+)
+
+RESULT:
+   customer_segment  transactions  digital_first_pct  avg_value_bnd  avg_income_bnd
+         Tech Savvy           858               66.2         166.16          2973.0
+Young Professionals          1364               47.1         162.41          2876.0
+     Working Adults          1079               33.6         156.75          2813.0
+  Traditional Users           847               16.3         167.12          2981.0
+    Senior Citizens           550               13.3         154.11          3118.0
+
+(saved CSV: C:\Users\ASUS\Documents\Big Data Tech Task\digital_payment_analytics\spark_outputs\answer_1.csv)
+
+==================================================================================
+ANSWER 2 | Merchant-category revenue and failure rate
+==================================================================================
+QUESTION: Which merchant categories contribute the most successful value, and do any categories show a notably higher failure rate? Only categories with at least 100 transactions are compared.
+
+CODE:
+answer_2 = spark.sql("""
+SELECT merchant_category,
+       COUNT(*) AS transactions,
+       ROUND(SUM(CASE WHEN transaction_status='Successful'
+                      THEN transaction_value_bnd ELSE 0 END), 2) AS successful_value_bnd,
+       ROUND(AVG(transaction_value_bnd), 2) AS avg_value_bnd,
+       ROUND(100.0 * SUM(CASE WHEN transaction_status='Failed' THEN 1 ELSE 0 END)
+             / COUNT(*), 2) AS failure_pct
+FROM transactions
+GROUP BY merchant_category
+HAVING COUNT(*) >= 100
+ORDER BY failure_pct DESC
+""")
+
+RESULT:
+merchant_category  transactions  successful_value_bnd  avg_value_bnd failure_pct
+  Online Shopping           347              68225.65         217.92        7.20
+       Healthcare           255              38889.02         167.28        7.06
+    Entertainment           290              29451.01         109.65        5.86
+          Grocery           899              67307.36          80.01        5.23
+        Utilities           420             104183.03         270.23        5.00
+           Retail           816             200659.99         262.33        3.68
+        Education           225              52556.92         248.64        3.11
+   Transportation           625              16008.33          27.05        2.40
+       Restaurant           949              48834.07          53.73        2.32
+           Travel           174             133417.67         796.52        2.30
+
+(saved CSV: C:\Users\ASUS\Documents\Big Data Tech Task\digital_payment_analytics\spark_outputs\answer_2.csv)
+
+==================================================================================
+ANSWER 3 | Time-of-day and urbanity interaction
+==================================================================================
+QUESTION: How do transaction volume and value differ across morning/afternoon/evening and across urban, suburban and rural locations?
+
+CODE:
+answer_3 = (
+    transactions.filter(F.col("transaction_status") == "Successful")
+    .join(locations.select("location_id", "urbanity", "district"), "location_id")
+    .withColumn("hour_bucket",
+         F.when(F.col("transaction_hour") < 12, "Morning")
+          .when(F.col("transaction_hour") < 17, "Afternoon")
+          .otherwise("Evening"))
+    .groupBy("hour_bucket", "urbanity")
+    .agg(F.count("*").alias("transactions"),
+         F.round(F.sum("transaction_value_bnd"), 2).alias("total_value_bnd"),
+         F.round(F.avg("transaction_value_bnd"), 2).alias("avg_value_bnd"))
+    .orderBy("hour_bucket", "urbanity")
+)
+
+RESULT:
+hour_bucket urbanity  transactions  total_value_bnd  avg_value_bnd
+  Afternoon    Rural           110         23722.71         215.66
+  Afternoon Suburban           187         33311.55         178.14
+  Afternoon    Urban          1304        204500.14         156.83
+    Evening    Rural           124         17522.21         141.31
+    Evening Suburban           181         31977.80         176.67
+    Evening    Urban          1488        238378.91         160.20
+    Morning    Rural            98         14133.80         144.22
+    Morning Suburban           111         18643.36         167.96
+    Morning    Urban          1095        177342.57         161.96
+
+(saved CSV: C:\Users\ASUS\Documents\Big Data Tech Task\digital_payment_analytics\spark_outputs\answer_3.csv)
+
+==================================================================================
+ANSWER 4 | High-value cross-border payments by district and channel
+==================================================================================
+QUESTION: Where and through which payment rails do successful cross-border payments of at least 500 BND occur?
+
+CODE:
+answer_4 = spark.sql("""
+SELECT l.district, t.payment_channel,
+       COUNT(*) AS cross_border_tx,
+       ROUND(SUM(t.transaction_value_bnd), 2) AS total_value_bnd
+FROM transactions t
+JOIN locations l ON t.location_id = l.location_id
+WHERE t.transaction_status = 'Successful'
+  AND t.is_cross_border = 'Yes'
+  AND t.transaction_value_bnd >= 500
+GROUP BY l.district, t.payment_channel
+ORDER BY total_value_bnd DESC
+""")
+
+RESULT:
+    district payment_channel  cross_border_tx  total_value_bnd
+Brunei-Muara   Mobile Wallet                2          2150.40
+      Belait   Mobile Wallet                2          2086.55
+      Belait  Online Banking                1          1642.25
+      Tutong   Mobile Wallet                1          1593.76
+Brunei-Muara     Credit Card                2          1310.31
+Brunei-Muara      QR Payment                1          1119.86
+      Belait     Credit Card                1           763.31
+      Tutong      QR Payment                1           525.13
+
+(saved CSV: C:\Users\ASUS\Documents\Big Data Tech Task\digital_payment_analytics\spark_outputs\answer_4.csv)
+
+==================================================================================
+ANSWER 5 | Top-value customers within each segment (RFM-style)
+==================================================================================
+QUESTION: Who are the five highest-spend successful customers in each segment, and how recently did they pay? This combines frequency, monetary value and recency with a per-segment window ranking.
+
+CODE:
+win = Window.partitionBy("customer_segment").orderBy(F.desc("monetary"))
+answer_5 = (
+    transactions.filter(F.col("transaction_status") == "Successful")
+    .groupBy("customer_id")
+    .agg(F.count("*").alias("frequency"),
+         F.round(F.sum("transaction_value_bnd"), 2).alias("monetary"),
+         F.max(F.to_date("transaction_date")).alias("last_payment"))
+    .join(customers.select("customer_id", "customer_segment",
+                           "monthly_income_bnd"), "customer_id")
+    .withColumn("recency_days", F.datediff(F.lit(max_date), F.col("last_payment")))
+    .withColumn("rank_in_segment", F.rank().over(win))
+    .filter(F.col("rank_in_segment") <= 5)
+    .select("customer_id", "customer_segment", "frequency", "monetary",
+            "recency_days", "monthly_income_bnd", "rank_in_segment")
+    .orderBy("customer_segment", "rank_in_segment")
+)
+
+RESULT:
+customer_id    customer_segment  frequency  monetary  recency_days  monthly_income_bnd  rank_in_segment
+      C0198     Senior Citizens         27   4770.50             3                6000                1
+      C0034     Senior Citizens         23   4358.00            29                1000                2
+      C0040     Senior Citizens         18   4092.25            20                6000                3
+      C0051     Senior Citizens         20   3908.42             8                2500                4
+      C0267     Senior Citizens         22   3770.96            20                3000                5
+      C0300          Tech Savvy         25   7042.82             1                5000                1
+      C0294          Tech Savvy         22   4223.68             2                3000                2
+      C0283          Tech Savvy         21   3970.07            71                6000                3
+      C0081          Tech Savvy         20   3811.43            28                6000                4
+      C0095          Tech Savvy         10   3794.50            22                4000                5
+      C0069   Traditional Users         19   4996.15            13                2000                1
+      C0080   Traditional Users         17   4668.66            10                5000                2
+      C0116   Traditional Users         19   4518.58            29                5000                3
+      C0155   Traditional Users         18   4510.76             4                3000                4
+      C0043   Traditional Users         21   4478.33            14                5000                5
+      C0268      Working Adults         20   6600.31             1                6000                1
+      C0212      Working Adults         23   5557.08            11                3000                2
+      C0213      Working Adults         23   5251.41            26                6000                3
+      C0033      Working Adults         18   4983.72            11                6000                4
+      C0191      Working Adults         21   4481.33            18                4000                5
+      C0171 Young Professionals         23   6428.45            30                4000                1
+      C0039 Young Professionals         20   6057.85             6                6000                2
+      C0201 Young Professionals         22   5993.58             3                4000                3
+      C0115 Young Professionals         24   5767.46             0                2000                4
+      C0151 Young Professionals         20   5441.83             0                6000                5
+
+(saved CSV: C:\Users\ASUS\Documents\Big Data Tech Task\digital_payment_analytics\spark_outputs\answer_5.csv)
+
+==================================================================================
+ANSWER 6 | Success rate by channel and device combination
+==================================================================================
+QUESTION: Do payment success rates differ across channel/device pairs, after ignoring combinations with fewer than 50 observations?
+
+CODE:
+answer_6 = (
+    transactions
+    .groupBy("payment_channel", "device_type")
+    .agg(F.count("*").alias("transactions"),
+         F.round(100 * F.avg((F.col("transaction_status") == "Successful")
+                             .cast("int")), 2).alias("success_pct"),
+         F.round(F.avg("transaction_value_bnd"), 2).alias("avg_value_bnd"))
+    .filter(F.col("transactions") >= 50)
+    .orderBy(F.desc("success_pct"))
+)
+
+RESULT:
+payment_channel  device_type  transactions  success_pct  avg_value_bnd
+  Bank Transfer     Computer           250        96.00         138.60
+  Bank Transfer POS Terminal           250        96.00         150.29
+     Debit Card   Smartphone           327        95.72         160.11
+ Online Banking   Smartphone           296        94.93         180.37
+    Credit Card   Smartphone           266        94.36         159.40
+     QR Payment   Smartphone           939        94.25         163.35
+  Bank Transfer   Smartphone           223        94.17         162.70
+    Credit Card     Computer           250        93.60         139.30
+  Mobile Wallet   Smartphone           963        93.46         168.09
+ Online Banking     Computer           312        93.27         164.60
+     Debit Card POS Terminal           356        92.70         164.65
+     Debit Card     Computer           322        92.55         169.04
+    Credit Card POS Terminal           246        91.46         166.11
+
+(saved CSV: C:\Users\ASUS\Documents\Big Data Tech Task\digital_payment_analytics\spark_outputs\answer_6.csv)

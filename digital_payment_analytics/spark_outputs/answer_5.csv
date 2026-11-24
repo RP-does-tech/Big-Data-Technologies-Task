@@ -1,0 +1,26 @@
+customer_id,customer_segment,frequency,monetary,recency_days,monthly_income_bnd,rank_in_segment
+C0198,Senior Citizens,27,4770.5,3,6000,1
+C0034,Senior Citizens,23,4358.0,29,1000,2
+C0040,Senior Citizens,18,4092.25,20,6000,3
+C0051,Senior Citizens,20,3908.42,8,2500,4
+C0267,Senior Citizens,22,3770.96,20,3000,5
+C0300,Tech Savvy,25,7042.82,1,5000,1
+C0294,Tech Savvy,22,4223.68,2,3000,2
+C0283,Tech Savvy,21,3970.07,71,6000,3
+C0081,Tech Savvy,20,3811.43,28,6000,4
+C0095,Tech Savvy,10,3794.5,22,4000,5
+C0069,Traditional Users,19,4996.15,13,2000,1
+C0080,Traditional Users,17,4668.66,10,5000,2
+C0116,Traditional Users,19,4518.58,29,5000,3
+C0155,Traditional Users,18,4510.76,4,3000,4
+C0043,Traditional Users,21,4478.33,14,5000,5
+C0268,Working Adults,20,6600.31,1,6000,1
+C0212,Working Adults,23,5557.08,11,3000,2
+C0213,Working Adults,23,5251.41,26,6000,3
+C0033,Working Adults,18,4983.72,11,6000,4
+C0191,Working Adults,21,4481.33,18,4000,5
+C0171,Young Professionals,23,6428.45,30,4000,1
+C0039,Young Professionals,20,6057.85,6,6000,2
+C0201,Young Professionals,22,5993.58,3,4000,3
+C0115,Young Professionals,24,5767.46,0,2000,4
+C0151,Young Professionals,20,5441.83,0,6000,5

@@ -1,0 +1,14 @@
+payment_channel,device_type,transactions,success_pct,avg_value_bnd
+Bank Transfer,Computer,250,96.0,138.6
+Bank Transfer,POS Terminal,250,96.0,150.29
+Debit Card,Smartphone,327,95.72,160.11
+Online Banking,Smartphone,296,94.93,180.37
+Credit Card,Smartphone,266,94.36,159.4
+QR Payment,Smartphone,939,94.25,163.35
+Bank Transfer,Smartphone,223,94.17,162.7
+Credit Card,Computer,250,93.6,139.3
+Mobile Wallet,Smartphone,963,93.46,168.09
+Online Banking,Computer,312,93.27,164.6
+Debit Card,POS Terminal,356,92.7,164.65
+Debit Card,Computer,322,92.55,169.04
+Credit Card,POS Terminal,246,91.46,166.11

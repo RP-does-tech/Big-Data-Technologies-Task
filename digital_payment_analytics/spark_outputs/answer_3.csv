@@ -1,0 +1,10 @@
+hour_bucket,urbanity,transactions,total_value_bnd,avg_value_bnd
+Afternoon,Rural,110,23722.71,215.66
+Afternoon,Suburban,187,33311.55,178.14
+Afternoon,Urban,1304,204500.14,156.83
+Evening,Rural,124,17522.21,141.31
+Evening,Suburban,181,31977.8,176.67
+Evening,Urban,1488,238378.91,160.2
+Morning,Rural,98,14133.8,144.22
+Morning,Suburban,111,18643.36,167.96
+Morning,Urban,1095,177342.57,161.96

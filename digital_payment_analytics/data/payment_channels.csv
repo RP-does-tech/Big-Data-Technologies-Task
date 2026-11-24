@@ -1,0 +1,7 @@
+payment_channel,channel_id,channel_description
+Mobile Wallet,PC01,Wallet balance or linked-account mobile payment
+QR Payment,PC02,Scan-and-pay QR code settlement
+Debit Card,PC03,Card payment debited directly from bank account
+Credit Card,PC04,Card payment settled on a credit line
+Online Banking,PC05,Internet or mobile banking transfer/payment
+Bank Transfer,PC06,Account-to-account transfer (e.g. FAST/PayNow style)

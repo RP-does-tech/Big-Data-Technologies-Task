@@ -9,6 +9,8 @@ figures are rebuilt from the current selection instead of reading static PNGs.
 
 Pages
 -----
+* About         — project background, dataset and reading notes.
+* GitHub        — QR code for the project repository.
 * Overview      — KPI row and the six question-led dashboard charts.
 * Data & SQL    — filtered records plus an in-memory SQL console.
 * Distributions — univariate EDA figures (value, categories, time, customer).
@@ -51,6 +53,7 @@ st.set_page_config(
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
+GITHUB_QR_PATH = os.path.join(BASE_DIR, "assets", "github_qr.svg")
 
 DIGITAL_RAILS = ["Mobile Wallet", "QR Payment"]
 STATUS_ORDER = ["Successful", "Failed", "Pending"]
@@ -268,6 +271,155 @@ def apply_filters(df: pd.DataFrame, locations: pd.DataFrame) -> pd.DataFrame:
         st.warning("No transactions match the current filters. Widen the selection or reset.")
         st.stop()
     return filtered
+
+
+# ---------------------------------------------------------------------------
+# About page
+# ---------------------------------------------------------------------------
+
+def page_about() -> None:
+    st.title("About")
+    st.caption(
+        "Background, data and guidance for this interactive analytics app."
+    )
+
+    with st.container(border=True):
+        st.subheader("Digital payment analytics · Brunei 2025")
+        st.markdown(
+            "This app brings the Stage 6 question-led dashboard together with "
+            "the Stage 3 exploratory analysis. All pages share one set of "
+            "sidebar filters: charts, tables and SQL results are rebuilt from "
+            "the selected rows instead of reading static PNG files."
+        )
+        c1, c2, c3, c4 = st.columns(4)
+        with c1:
+            st.metric("Transactions", f"{len(all_data):,}", border=True)
+        with c2:
+            st.metric("Customers", f"{len(customers_all):,}", border=True)
+        with c3:
+            st.metric("Locations", f"{len(locations):,}", border=True)
+        with c4:
+            st.metric(
+                "Merchant categories",
+                f"{all_data['merchant_category'].nunique()}",
+                border=True,
+            )
+
+    left, right = st.columns(2)
+    with left:
+        with st.container(border=True):
+            st.subheader("Dataset")
+            st.markdown(
+                "- **Grain:** one synthetic payment attempt per row.\n"
+                "- **Period:** 1 Jan – 31 Dec 2025; currency: BND throughout.\n"
+                "- **Dimensions:** 300 customers and 100 locations joined to "
+                "the transaction fact table.\n"
+                "- **Lookups:** 6 payment channels and 10 merchant categories.\n"
+                "- **Quality:** no missing values, no duplicate IDs and all "
+                "foreign keys resolve.\n"
+                "- **Privacy:** no real people, accounts or card details."
+            )
+    with right:
+        with st.container(border=True):
+            st.subheader("Project pipeline")
+            st.markdown(
+                "| Stage | Contribution |\n"
+                "| --- | --- |\n"
+                "| 2 · Data design | Deterministic synthetic CSVs (seed 42). |\n"
+                "| 3 · EDA | Distributions, relationships, correlations and "
+                "outliers. |\n"
+                "| 4 · MongoDB | Document-store aggregations. |\n"
+                "| 5 · Spark | Distributed answers to the six questions. |\n"
+                "| 6 · Visualisation | Six question-led charts and "
+                "interpretation. |\n"
+                "| Final app | This interactive Streamlit view. |"
+            )
+
+    with st.container(border=True):
+        st.subheader("Where to look")
+        st.markdown(
+            "- **Overview** — KPIs and the six question-led dashboard charts.\n"
+            "- **Data & SQL** — inspect filtered rows and run `SELECT` queries "
+            "against an in-memory SQLite table.\n"
+            "- **Distributions / Relationships / Multivariate** — the EDA "
+            "figures, all driven by the current filters.\n"
+            "- **Statistics** — descriptive tables, crosstabs, correlations, "
+            "outlier checks and a downloadable summary."
+        )
+
+    with st.container(border=True):
+        st.subheader("How to read the results")
+        st.markdown(
+            "Every figure is **descriptive**. The generator deliberately built "
+            "in the segment–channel gradient, category value ranges and income "
+            "scaling, so rediscovering them is not evidence of real-world "
+            "causation. Small success-rate differences are compatible with "
+            "sampling variation, and high-value payments are an expected "
+            "right tail rather than automatic errors."
+        )
+
+    with st.expander("Technical notes and reproduction", icon=":material/code:"):
+        st.markdown(
+            "Built with Streamlit, pandas, Altair, Matplotlib and Seaborn. "
+            "Source CSVs are cached for one hour; filters are applied on each "
+            "rerun. The SQL console uses Python's built-in `sqlite3` module.\n\n"
+            "Run locally with:"
+        )
+        st.code(
+            "python -m streamlit run finalvisualization.py", language="powershell"
+        )
+        st.caption(
+            "Detailed write-ups are in the `md/` folder; generated outputs are "
+            "in `eda_outputs/`, `mongodb_outputs/`, `spark_outputs/` and "
+            "`dashboard_outputs/`."
+        )
+
+
+# ---------------------------------------------------------------------------
+# GitHub page
+# ---------------------------------------------------------------------------
+
+def page_github() -> None:
+    st.title("GitHub")
+    st.caption("Source code for the Digital Payment Analytics project.")
+
+    left, right = st.columns([1, 2])
+    with left:
+        with st.container(border=True, horizontal_alignment="center"):
+            st.image(
+                GITHUB_QR_PATH,
+                width=280,
+                alt="QR code linking to the project's GitHub repository",
+            )
+            st.caption("Scan to open the repository on another device.")
+    with right:
+        with st.container(border=True):
+            st.subheader("Project repository")
+            st.markdown(
+                "The GitHub repository holds the complete project: the "
+                "synthetic data generator, Stage 3–6 scripts, this Streamlit "
+                "app, and the reports in `md/`."
+            )
+            st.markdown(
+                "- **Data:** `data/*.csv` — 5,000 transactions, 300 customers "
+                "and 100 locations.\n"
+                "- **Analysis:** `eda_analysis.py`, `mongodb.py`, `spark.py` "
+                "and the visualisation scripts.\n"
+                "- **App:** `finalvisualization.py` — the interactive view "
+                "you are using now.\n"
+                "- **Reports:** stage write-ups and output inventories in "
+                "`md/`."
+            )
+        with st.container(border=True):
+            st.subheader("Run it locally")
+            st.code(
+                "python -m streamlit run finalvisualization.py",
+                language="powershell",
+            )
+            st.caption(
+                "The repository also documents how to regenerate the CSVs "
+                "and all saved outputs."
+            )
 
 
 # ---------------------------------------------------------------------------
@@ -1272,7 +1424,7 @@ def live_clock() -> None:
 
 
 # ---------------------------------------------------------------------------
-# App entry point: load once, filter once, then navigate
+# App entry point: load once, navigate, then filter the analysis pages
 # ---------------------------------------------------------------------------
 
 header_title, clock_slot = st.columns([10, 1], gap="small")
@@ -1282,16 +1434,18 @@ with clock_slot:
     live_clock()
 
 all_data, locations, customers_all = load_data()
-frame = apply_filters(all_data, locations)
-start_date = frame["transaction_date"].min().date()
-end_date = frame["transaction_date"].max().date()
-stats = numeric_stats(frame)
-st.session_state.setdefault("sql_query", EXAMPLE_QUERIES["Channel volume"])
 
 page = st.navigation(
     {
+        "": [
+            st.Page(page_about, title="About", icon=":material/info:"),
+            st.Page(page_github, title="GitHub", icon=":material/qr_code:"),
+        ],
         "Overview": [
-            st.Page(page_overview, title="Overview", icon=":material/dashboard:"),
+            st.Page(
+                page_overview, title="Overview", icon=":material/dashboard:",
+                default=True,
+            ),
             st.Page(page_data_sql, title="Data & SQL", icon=":material/database:"),
         ],
         "Exploratory analysis": [
@@ -1303,4 +1457,16 @@ page = st.navigation(
     },
     position="top",
 )
+
+# Informational pages do not require a valid filter selection. Data pages run
+# the shared filters once, then render as before.
+if page.title in {"About", "GitHub"}:
+    page.run()
+    st.stop()
+
+frame = apply_filters(all_data, locations)
+start_date = frame["transaction_date"].min().date()
+end_date = frame["transaction_date"].max().date()
+stats = numeric_stats(frame)
+st.session_state.setdefault("sql_query", EXAMPLE_QUERIES["Channel volume"])
 page.run()
